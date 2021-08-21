@@ -1,0 +1,25 @@
+%\begin{figure}
+
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+    % Controller
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm
+    ]  (Memory1) at (0,0) {$x$};
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm,
+        right=0cm of Memory1
+    ]  (Memory2) {$y$};
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm,
+        right=0cm of Memory2
+    ]  (Memory3) {$z$};
+    \node[text width=8cm, anchor=north] at (3,1.5)
+    {Memory Block created using struct};
+
+\end{tikzpicture}
+%\end{figure

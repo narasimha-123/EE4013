@@ -1,0 +1,38 @@
+%\begin{figure}
+
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+    % Controller
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm
+    ]  (Memory1) at (0,0) {$0$};
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm,
+        right=0cm of Memory1
+    ]  (Memory2) {$1$};
+    \node [draw,
+        minimum width=2cm,
+        minimum height=1.2cm,
+        right=0cm of Memory2
+    ]  (Memory3) {$c$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        below left= 2cm and 0.5cm of Memory1
+    ] (Pointer1) {$p$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        below left= 2cm and -1.5cm of Memory1
+    ] (Pointer2) {$q$};
+    % Arrows with text label
+    \draw[-stealth] (Pointer1.north) -- (Memory1.south west)
+    node[midway,above]{};
+    \draw[-stealth] (Pointer2.north) -- (Memory1.south)
+    node[midway,above]{};
+
+\end{tikzpicture}
+%\end{figure
